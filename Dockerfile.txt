@@ -1,0 +1,14 @@
+# Use a slim Python 3.10 image
+FROM python:3.10-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the entire current directory to the working directory in the container
+COPY . /app
+
+# Install required dependencies
+RUN pip install flask sqlite3 pandas
+
+# Run the Flask application
+CMD ["python", "app.py"]
