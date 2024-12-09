@@ -1,7 +1,6 @@
-// Base URL for the API
+
 const API_BASE = "http://127.0.0.1:5000";
 
-// Function to fetch and display flavors
 async function fetchFlavors() {
     try {
         const response = await fetch(`${API_BASE}/flavors`);
